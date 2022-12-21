@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function criaObjeto() {
+            let objeto = {};
+            return objeto;
+        }
+
+        let total = criaObjeto();
+
+        total.receitas = [10, 20, 60];
+        total.despesas = [-10, -30.22222, -20];
+        total.total = 0;
+
+        function calcularTotal(valor) {
+            total.total += valor
+        }
+
+        total.receitas.forEach(calcularTotal);
+        total.despesas.forEach(calcularTotal);
+
+        function verificaSaldo() {
+            if (total.total >= 0){
+                total.total = `O saldo da família é positivo, valor do saldo = R$ ${total.total.toFixed(2)}`;
+            } else {
+                total.total = `O saldo da família é negativo, valor do saldo = R$ ${total.total.toFixed(2)}`;
+            }
+            return total.total;
+        }
+        verificaSaldo();
+        console.log(total.total);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

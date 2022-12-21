@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>function avaliaNota(nota){
+        if(nota >= 90 && nota <= 100) {
+            nota = 'A'
+        } else if(nota >= 80){
+            nota = 'B'
+        } else if(nota >= 70){
+            nota = 'C'
+        } else if(nota >= 60){
+            nota = 'D'
+        } else if(nota >= 0){
+            nota = 'F'
+        } else {
+            nota = 'nota inválida'
+        }
+    
+        return nota
+    }
+    
+    console.log(avaliaNota(12))
+    console.log(avaliaNota(65))
+    console.log(avaliaNota(-1))
+    console.log(avaliaNota(86))
+    console.log(avaliaNota(100))
+    console.log(avaliaNota(101))
+    console.log(avaliaNota(75))
+    console.log(avaliaNota(54))
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

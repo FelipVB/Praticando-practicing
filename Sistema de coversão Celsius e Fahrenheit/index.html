@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function convertNumber(number){
+            const F = number.toUpperCase().includes('F')
+            const C = number.toUpperCase().includes('C')
+
+            if(!C && !F){
+                return 'Invalid value'
+            }
+            if(F){
+                let C = parseInt(number) - 32 * 5/9;      
+                return `${C.toFixed(2)} Celsius`;
+            }else {
+                let F = parseInt(number) * 9/5 + 32;
+                return `${F.toFixed(2)} Fahrenheit`;
+            }
+            
+        }
+        console.log(convertNumber('30ec'));
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
